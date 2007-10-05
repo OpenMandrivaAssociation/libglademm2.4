@@ -1,6 +1,6 @@
 %define pkgname libglademm
-%define version 2.6.4
-%define release %mkrel 2
+%define version 2.6.5
+%define release %mkrel 1
 
 %define libglade_version 2.6.1
 %define gtkmm_version 2.6.0
@@ -9,6 +9,7 @@
 %define api_version 2.4
 %define libname		%mklibname glademm %{api_version} %{major}
 %define libname_orig	%mklibname glademm %{api_version}
+%define develname %mklibname -d glademm %{api_version}
 
 Name:	 	%{pkgname}%{api_version}
 Summary: 	C++ interface of glade2 library
@@ -39,7 +40,7 @@ This package provides a C++ interface for glade2.  It is a subpackage
 of the gnomemm project.  The interface provides a convenient interface for C++
 programmers to create glade2 objects.
 
-%package	-n %{libname}-devel
+%package	-n %develname
 Summary:	Development related files of %{pkgname}
 Group:		Development/GNOME and GTK+
 Provides:	%{pkgname}-devel = %{version}-%{release}
@@ -47,8 +48,9 @@ Provides:	%name-devel = %version-%release
 Requires:	%{libname} = %{version}
 Requires:	libglade2.0-devel >= %{libglade_version}
 Requires:	gtkmm2.4-devel >= %{gtkmm_version}
+Obsoletes: %mklibname -d glademm 2.4 1
 
-%description	-n %{libname}-devel
+%description	-n %develname
 This package provides headers and various development files needed for
 compiling or developing applications that use Glade 2 C++ interface.
 
@@ -87,9 +89,9 @@ rm -rf %{buildroot}
 %files -n %{libname}
 %defattr(-, root, root)
 %doc AUTHORS COPYING ChangeLog INSTALL
-%{_libdir}/*.so.*
+%{_libdir}/libglademm-%{api_version}.so.%{major}*
 
-%files -n %{libname}-devel
+%files -n %develname
 %defattr(-, root, root)
 %doc AUTHORS COPYING ChangeLog INSTALL
 %{_includedir}/*
