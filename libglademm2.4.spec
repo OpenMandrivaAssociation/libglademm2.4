@@ -1,6 +1,6 @@
 %define pkgname libglademm
-%define version 2.6.6
-%define release %mkrel 2
+%define version 2.6.7
+%define release %mkrel 1
 
 %define libglade_version 2.6.1
 %define gtkmm_version 2.6.0
@@ -15,7 +15,7 @@ Name:	 	%{pkgname}%{api_version}
 Summary: 	C++ interface of glade2 library
 Version: 	%{version}
 Release: 	%{release}
-License: 	LGPL
+License: 	LGPLv2+
 Group:   	System/Libraries
 Source:  	ftp://ftp.gnome.org/pub/GNOME/sources/%{pkgname}/%{pkgname}-%{version}.tar.bz2
 URL:     	http://gtkmm.sourceforge.net/
