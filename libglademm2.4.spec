@@ -1,6 +1,6 @@
 %define pkgname libglademm
 %define version 2.6.7
-%define release %mkrel 3
+%define release %mkrel 4
 
 %define libglade_version 2.6.1
 %define gtkmm_version 2.6.0
