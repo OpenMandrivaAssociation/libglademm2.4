@@ -1,6 +1,6 @@
 %define pkgname libglademm
 %define version 2.6.7
-%define release %mkrel 6
+%define release %mkrel 7
 
 %define libglade_version 2.6.1
 %define gtkmm_version 2.6.0
@@ -102,7 +102,6 @@ rm -rf %{buildroot}
 %{_libdir}/%{pkgname}-%{api_version}
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/*.a
-%attr(644,root,root) %{_libdir}/*.la
 %{_libdir}/*.so
 
 %files doc
