@@ -102,6 +102,7 @@ rm -rf %{buildroot}
 %{_libdir}/%{pkgname}-%{api_version}
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/*.a
+#%attr(644,root,root) %{_libdir}/*.la
 %{_libdir}/*.so
 
 %files doc
@@ -109,4 +110,106 @@ rm -rf %{buildroot}
 %{_docdir}/gnomemm-2.6/*
 %{_datadir}/devhelp/books/*
 
+
+
+
+%changelog
+* Mon May 02 2011 Oden Eriksson <oeriksson@mandriva.com> 2.6.7-5mdv2011.0
++ Revision: 661464
+- mass rebuild
+
+* Sun Nov 28 2010 Oden Eriksson <oeriksson@mandriva.com> 2.6.7-4mdv2011.0
++ Revision: 602552
+- rebuild
+
+* Tue Mar 16 2010 Oden Eriksson <oeriksson@mandriva.com> 2.6.7-3mdv2010.1
++ Revision: 520833
+- rebuilt for 2010.1
+
+* Wed Sep 02 2009 Christophe Fergeau <cfergeau@mandriva.com> 2.6.7-2mdv2010.0
++ Revision: 425550
+- rebuild
+
+* Mon Sep 22 2008 GÃ¶tz Waschk <waschk@mandriva.org> 2.6.7-1mdv2009.0
++ Revision: 286534
+- new version
+
+* Tue Jun 17 2008 Thierry Vignaud <tv@mandriva.org> 2.6.6-2mdv2009.0
++ Revision: 222596
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Sun Feb 10 2008 GÃ¶tz Waschk <waschk@mandriva.org> 2.6.6-1mdv2008.1
++ Revision: 164910
+- new version
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Fri Oct 05 2007 GÃ¶tz Waschk <waschk@mandriva.org> 2.6.5-1mdv2008.1
++ Revision: 95564
+- new version
+- new devel name
+
+* Mon Jul 09 2007 GÃ¶tz Waschk <waschk@mandriva.org> 2.6.4-2mdv2008.0
++ Revision: 50525
+- rebuild for new glib2.0
+
+* Tue Jun 19 2007 GÃ¶tz Waschk <waschk@mandriva.org> 2.6.4-1mdv2008.0
++ Revision: 41506
+- new version
+- bump deps
+
+
+* Tue Jan 02 2007 GÃ¶tz Waschk <waschk@mandriva.org> 2.6.3-2mdv2007.0
++ Revision: 103070
+- Import libglademm2.4
+
+* Tue Jan 02 2007 GÃ¶tz Waschk <waschk@mandriva.org> 2.6.3-2mdv2007.1
+- Rebuild
+
+* Wed Aug 23 2006 Götz Waschk <waschk@mandriva.org> 2.6.3-1mdv2007.0
+- New release 2.6.3
+
+* Thu Feb 23 2006 GÃ¶tz Waschk <waschk@mandriva.org> 2.6.2-1mdk
+- New release 2.6.2
+- use mkrel
+
+* Sun Oct 09 2005 GÃ¶tz Waschk <waschk@mandriva.org> 2.6.1-1mdk
+- New release 2.6.1
+
+* Tue May 10 2005 Götz Waschk <waschk@mandriva.org> 2.6.0-2mdk
+- fix devel provides
+
+* Mon Mar 07 2005 Götz Waschk <waschk@linux-mandrake.com> 2.6.0-1mdk
+- requires new gtkmm
+- New release 2.6.0
+
+* Wed Feb 23 2005 Götz Waschk <waschk@linux-mandrake.com> 2.4.2-1mdk
+- source URL
+- New release 2.4.2
+
+* Mon Jun 21 2004 Abel Cheung <deaddog@deaddog.org> 2.4.1-2mdk 
+- Rebuild against new gtkmm
+- fix source URL
+
+* Tue Jun 08 2004 GÃ¶tz Waschk <waschk@linux-mandrake.com> 2.4.1-1mdk
+- fix source URL
+- reenable libtoolize
+- New release 2.4.1
+
+* Thu Apr 29 2004 Abel Cheung <deaddog@deaddog.org> 2.4.0-1mdk
+- New major release
+
+* Thu Apr 29 2004 Abel Cheung <deaddog@deaddog.org> 2.2.0-1mdk
+- New version
+- Remove all patches (upstream or not needed)
+- Only provides libglademm2.0(-devel), so other packages won't
+  require libglademm without indicating API version
+- Please use UTF-8 for spec in the future
 
