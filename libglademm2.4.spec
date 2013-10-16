@@ -9,7 +9,7 @@
 Summary:	C++ interface of glade2 library
 Name:		%{pkgname}%{api}
 Version:	2.6.7
-Release:	9
+Release:	10
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://gtkmm.sourceforge.net/
