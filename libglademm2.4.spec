@@ -1,4 +1,5 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
+%define _disable_lto 1
 
 %define pkgname	libglademm
 %define api	2.4
@@ -58,6 +59,7 @@ The documents can be browsed via devhelp, an API documentation viewer.
 %setup -qn %{pkgname}-%{version}
 
 %build
+export CXXFLAGS="%{optflags} -std=gnu++11"
 %configure2_5x \
 	--disable-static
 %make 
