@@ -13,7 +13,7 @@ Version:	2.6.7
 Release:	26
 License:	LGPLv2+
 Group:		System/Libraries
-Url:		http://gtkmm.sourceforge.net/
+Url:		https://gtkmm.sourceforge.net/
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/libglademm/%{url_ver}/%{pkgname}-%{version}.tar.bz2
 
 Buildrequires:	doxygen
