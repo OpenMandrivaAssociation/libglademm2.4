@@ -16,6 +16,11 @@ Group:		System/Libraries
 Url:		https://gtkmm.sourceforge.net/
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/libglademm/%{url_ver}/%{pkgname}-%{version}.tar.bz2
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 Buildrequires:	doxygen
 BuildRequires:	pkgconfig(gtkmm-2.4)
 BuildRequires:	pkgconfig(libglade-2.0)
